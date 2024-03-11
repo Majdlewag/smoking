@@ -4,8 +4,10 @@ FROM python:3.8.12-slim
 COPY package_folder package_folder
 COPY requirements.txt requirements.txt
 COPY models models
+COPY setup.py setup.py
 
-RUN pip install requirements.txt
+#RUN pip install requirements.txt
+RUN pip install -e .
 
 
 # on my disk run it
